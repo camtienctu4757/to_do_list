@@ -1,12 +1,13 @@
-const todoList=[{
-    name: 'wash dishes',
-    date:'02-12-2023'
-},{
-    name: 'run',
-    date:'02-12-2023'
-}];
+// const todoList=[{
+//     name: 'wash dishes',
+//     date:'02-12-2023'
+// },{
+//     name: 'run',
+//     date:'02-12-2023'
+// }];
+const todoList =[]
 
-renderHTML();
+
 
 function renderHTML(){
     let contentHTMLs="";
