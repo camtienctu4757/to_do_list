@@ -1,0 +1,58 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(56, 5, 175);
+    color: #fff;
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+}
+
+.name_page{
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+}
+.bg-red{
+    background-color: red !important;
+}
+.bg-green{
+    background-color: green !important;
+}
+
+.inputElement,
+.one-work{
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.one-work{
+    margin-bottom: 10px;
+}
+
+.btn-add,
+.btn-delete{
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.input_work,
+.input_date{
+    padding: 7px;
+}
+.img-duck{
+   width: 60px;
+}
+.img-float{
+    float: right;
+    margin-right: 15px;
+    margin-top: 27px;
+}
