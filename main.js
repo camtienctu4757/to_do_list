@@ -11,16 +11,16 @@ const todoList =[]
 
 function renderHTML(){
     let contentHTMLs="";
-    for(let i = 0;i<todoList.length;i++){
-        const html = `
+    todoList.forEach(function(todoObject,index){
+         const html = `
         <div class='one-work'>
-            <div>${todoList[i].name}</div>
-            <div>${todoList[i].date}</div>
-            <button onClick="deleteWork(${i})" class="btn-delete bg-red">Delete</button>
+            <div>${todoObject.name}</div>
+            <div>${todoObject.date}</div>
+            <button onClick="deleteWork(${index})" class="btn-delete bg-red">Delete</button>
         </div>
         `;
         contentHTMLs += html;
-    }
+    })
     console.log(contentHTMLs);
     const listTodo = document.querySelector('.list-to-do');
     listTodo.innerHTML = contentHTMLs;
@@ -35,7 +35,14 @@ function addToDoList(){
     const inputValue = document.querySelector('.input_work');
     const inputDate = document.querySelector('.input_date');
     const name = inputValue.value;
-    const date = inputDate.value;
+    const temp = inputDate.value;
+    // console.log(name)
+    if(!name||!temp){
+        alert("vui long nhap thong tin day du")
+        return
+    }
+    const dateConvert = temp.split("-")
+    const date = `${dateConvert[2]}-${dateConvert[1]}-${dateConvert[0]}`
     todoList.push({name,date});
     renderHTML();
     inputValue.value = '';
